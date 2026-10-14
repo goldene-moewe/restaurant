@@ -1,0 +1,90 @@
+/* Farben und Schriften: hier zentral anpassen */
+:root {
+  --tiefsee: #0e1a2b;   /* Grundfarbe */
+  --hafen: #15253b;     /* Flächen */
+  --linie: #2a3d58;     /* feine Trennlinien */
+  --messing: #c8a45a;   /* Akzent: das Gold der Möwe */
+  --gischt: #efe9dc;    /* Haupttext */
+  --nebel: #a7b2c2;     /* Nebentext */
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+body {
+  margin: 0;
+  background: var(--tiefsee);
+  color: var(--gischt);
+  font: 1.0625rem/1.65 var(--sans);
+}
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--messing); outline-offset: 3px; }
+.wrap { width: min(100% - 3rem, 68rem); margin-inline: auto; }
+
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 1rem; top: 1rem; z-index: 10; padding: .5rem .75rem; background: var(--messing); color: var(--tiefsee); }
+
+/* Kopfzeile */
+.kopf { padding-block: 1.25rem; }
+.kopf .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
+.marke { display: flex; align-items: center; gap: .7rem; text-decoration: none; font: 1.3rem var(--serif); }
+.marke svg { width: 2.6rem; height: auto; }
+.marke path { fill: none; stroke: var(--messing); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.nav { display: flex; gap: 1.75rem; }
+.nav a { color: var(--nebel); text-decoration: none; }
+.nav a:hover { color: var(--gischt); }
+
+/* Startbereich */
+.hero { padding-block: clamp(3rem, 9vw, 7rem); }
+.hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; align-items: center; gap: 3rem; }
+h1 { margin: 0 0 1.25rem; font: 400 clamp(2.6rem, 6.5vw, 5rem)/1.05 var(--serif); letter-spacing: -.01em; }
+.lead { max-width: 34rem; margin: 0 0 2rem; font-size: 1.25rem; color: var(--nebel); }
+.aktionen { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem 1.75rem; }
+
+.knopf { display: inline-block; padding: .85rem 1.6rem; border-radius: 3px; background: var(--messing); color: var(--tiefsee); font-weight: 600; text-decoration: none; }
+.knopf:hover { background: #d9b972; }
+.textlink { text-underline-offset: .3em; }
+
+/* Die Möwe: das eine auffällige Element, zeichnet sich einmal beim Laden */
+.moewe { width: 100%; height: auto; overflow: visible; }
+.moewe path { fill: none; stroke: var(--messing); stroke-width: 1.6; stroke-linecap: round; }
+.moewe .zug { stroke-dasharray: 1; stroke-dashoffset: 1; animation: zeichnen 2.6s .3s ease-out forwards; }
+.moewe .zug2 { opacity: .5; animation-delay: 1s; }
+@keyframes zeichnen { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .moewe .zug { animation: none; stroke-dashoffset: 0; } }
+
+/* Abschnitte */
+section { padding-block: clamp(3.5rem, 8vw, 6rem); }
+.hero { padding-block: clamp(3rem, 9vw, 7rem); }
+h2 { margin: 0 0 1rem; font: 400 clamp(1.8rem, 3.5vw, 2.6rem)/1.15 var(--serif); }
+.text { max-width: 38rem; color: var(--nebel); }
+.text p:first-child { margin-top: 0; }
+
+.ueber .wrap { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; }
+
+.karte { background: var(--hafen); }
+.gaenge { max-width: 38rem; margin: 2rem 0 0; padding: 0; list-style: none; }
+.gaenge li { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid var(--linie); font: 1.45rem var(--serif); }
+.gaenge span { font: .95rem var(--sans); color: var(--nebel); }
+
+.bewerbung { background: var(--messing); color: var(--tiefsee); }
+.bewerbung p { max-width: 38rem; margin: 0 0 1.75rem; }
+.bewerbung .knopf { background: var(--tiefsee); color: var(--gischt); }
+.bewerbung .knopf:hover { background: var(--hafen); }
+.bewerbung :focus-visible { outline-color: var(--tiefsee); }
+
+/* Fußzeile */
+.fuss { padding-block: 3rem; color: var(--nebel); }
+.fuss p { margin: 0 0 .5rem; }
+.fuss .klein { font-size: .9rem; }
+
+/* Mobil */
+@media (max-width: 820px) {
+  .hero .wrap, .ueber .wrap { grid-template-columns: 1fr; gap: 2rem; }
+  .moewe { max-width: 26rem; }
+  .nav { gap: 1.25rem; }
+  .nav a:not(.wichtig) { display: none; }
+}
