@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Restaurant zur Goldenen Möwe</title>
+  <title>Restaurant zur Goldenen Möwe | Ehrliche Küche & Genuss</title>
   <meta name="description" content="Restaurant zur Goldenen Möwe: ehrliche Küche, freundlicher Service und ein Team, das sich auf Sie freut.">
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#0e1a2b">
@@ -17,12 +17,12 @@
     <div class="wrap">
       <a class="marke" href="./">
         <svg viewBox="0 0 64 40" aria-hidden="true"><path d="M4 30C14 8 28 4 32 26 36 4 50 8 60 30"/></svg>
-        Goldene Möwe
+        <span>Goldene Möwe</span>
       </a>
       <nav class="nav" aria-label="Hauptmenü">
-        <a href="#ueber-uns">Über uns</a>
-        <a class="wichtig" href="#speisekarte">Speisekarte</a>
-        <a class="wichtig" href="#bewerbung">Bewerbung</a>
+        <a href="ueber-uns.html">Über uns</a>
+        <a href="#speisekarte">Speisekarte</a>
+        <a href="#bewerbung">Bewerbung</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
     </div>
@@ -31,59 +31,85 @@
   <main id="inhalt">
     <section class="hero">
       <div class="wrap">
-        <div>
+        <div class="hero-text">
+          <span class="badge">Willkommen an Bord</span>
           <h1>Restaurant zur Goldenen Möwe</h1>
           <p class="lead">Ehrliche Küche, ruhige Atmosphäre und ein Team, das sich auf Ihren Besuch freut.</p>
           <div class="aktionen">
             <a class="knopf" href="#speisekarte">Speisekarte ansehen</a>
-            <a class="textlink" href="#bewerbung">Im Team mitarbeiten</a>
+            <a class="textlink" href="#bewerbung">Im Team mitarbeiten &rarr;</a>
           </div>
         </div>
-        <!-- Die Möwe zeichnet sich beim Laden einmal selbst. Später kann hier ein Foto stehen. -->
-        <svg class="moewe" viewBox="0 0 400 160" aria-hidden="true">
-          <path class="zug" pathLength="1" d="M8 128C58 58 130 36 196 108 262 36 342 58 392 128"/>
-          <path class="zug zug2" pathLength="1" d="M70 122C108 84 154 76 196 122 238 76 292 84 330 122"/>
-        </svg>
+        <div class="hero-visual">
+          <div class="moewe-card">
+            <svg class="moewe" viewBox="0 0 400 160" aria-hidden="true">
+              <path class="zug" pathLength="1" d="M8 128C58 58 130 36 196 108 262 36 342 58 392 128"/>
+              <path class="zug zug2" pathLength="1" d="M70 122C108 84 154 76 196 122 238 76 292 84 330 122"/>
+            </svg>
+            <div class="moewe-caption">Gastronomie mit Charakter</div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="ueber" id="ueber-uns">
+    <section class="teaser-ueber">
       <div class="wrap">
-        <h2>Über uns</h2>
-        <div class="text">
-          <p>Das Restaurant zur Goldenen Möwe steht für gutes Essen und freundlichen Service. Unsere Köche und Kellner sorgen dafür, dass jeder Gast gerne wiederkommt.</p>
-          <p>Hinter jedem Teller steht ein eingespieltes Team. Schauen Sie vorbei, wir freuen uns auf Sie.</p>
+        <div class="teaser-box">
+          <h2>Handwerkskunst & Leidenschaft</h2>
+          <p>Erleben Sie Gastfreundschaft, die von Herzen kommt. Erfahren Sie mehr über unsere Philosophie, unser Team und unsere Geschichte.</p>
+          <a class="knopf-outline" href="ueber-uns.html">Mehr über uns entdecken</a>
         </div>
       </div>
     </section>
 
     <section class="karte" id="speisekarte">
       <div class="wrap">
-        <h2>Speisekarte</h2>
-        <p class="text">Unsere Karte entsteht gerade. Hier finden Sie bald alle Gerichte und Getränke.</p>
-        <ul class="gaenge">
-          <li>Vorspeisen <span>Folgt in Kürze</span></li>
-          <li>Hauptgerichte <span>Folgt in Kürze</span></li>
-          <li>Desserts <span>Folgt in Kürze</span></li>
-          <li>Getränke <span>Folgt in Kürze</span></li>
-        </ul>
+        <div class="section-header">
+          <h2>Speisekarte</h2>
+          <p class="text">Frisch zubereitet, saisonal und mit Liebe gekocht. Entdecken Sie unsere kulinarischen Highlights.</p>
+        </div>
+        <div class="gaenge-grid">
+          <div class="gang-card">
+            <h3>Vorspeisen</h3>
+            <p class="gang-desc">Feine Suppen, frische Salate und raffinierte Kleinigkeiten zum Start.</p>
+            <span class="status">Folgt in Kürze</span>
+          </div>
+          <div class="gang-card">
+            <h3>Hauptgerichte</h3>
+            <p class="gang-desc">Deftige Klassiker, fangfrischer Fisch und kreative Menüs.</p>
+            <span class="status">Folgt in Kürze</span>
+          </div>
+          <div class="gang-card">
+            <h3>Desserts</h3>
+            <p class="gang-desc">Süße Verführungen und hausgemachte Kuchenkreationen.</p>
+            <span class="status">Folgt in Kürze</span>
+          </div>
+          <div class="gang-card">
+            <h3>Getränke</h3>
+            <p class="gang-desc">Erfrischende Getränke, erlesene Weine und Spezialitäten.</p>
+            <span class="status">Folgt in Kürze</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="bewerbung" id="bewerbung">
       <div class="wrap">
-        <h2>Werden Sie Teil unseres Teams</h2>
-        <p>Wir suchen Köche und Kellner. Sie erwartet ein nettes Kollegium, gute Aufstiegschancen und ein gutes Gehalt. Mitbringen sollten Sie Teamgeist, ein B-Führerschein ist optional.</p>
-        <!-- TODO: DEIN-LINK durch den Einladungslink zu deinem Discord-Server ersetzen -->
-        <a class="knopf" href="https://discord.gg/E5PDbMufH8">Auf Discord bewerben</a>
+        <div class="bewerbung-content">
+          <h2>Werden Sie Teil unseres Teams</h2>
+          <p>Wir suchen engagierte Köche und Kellner. Sie erwartet ein nettes Kollegium, gute Aufstiegschancen und ein attraktives Arbeitsumfeld. Bringen Sie Teamgeist mit (B-Führerschein optional).</p>
+          <a class="knopf" href="https://discord.gg/E5PDbMufH8" target="_blank" rel="noopener">Auf Discord bewerben</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="fuss" id="kontakt">
     <div class="wrap">
-      <p>Kontakt: Sie erreichen uns über unseren <a href="https://discord.gg/E5PDbMufH8">Discord-Server</a>.</p>
-      <p class="klein">© 2026 Restaurant zur Goldenen Möwe. Ein Rollenspiel-Projekt.</p>
+      <div class="fuss-content">
+        <p><strong>Kontakt:</strong> Sie erreichen uns über unseren <a href="https://discord.gg/E5PDbMufH8" target="_blank" rel="noopener">Discord-Server</a>.</p>
+        <p class="klein">&copy; 2026 Restaurant zur Goldenen Möwe. Ein Rollenspiel-Projekt.</p>
+      </div>
     </div>
   </footer>
 </body>
